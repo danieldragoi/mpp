@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MeniuController">
+    <children>
+        <HBox prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <VBox prefHeight="400.0" prefWidth="114.0">
+                    <children>
+                        <Label fx:id="labelOficiu" alignment="CENTER" prefHeight="54.0" prefWidth="110.0" style="-fx-border-color: blue;" text="Label">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Label>
+                  <Button fx:id="butonRezervaLocuri" mnemonicParsing="false" onAction="#onActionButonRezervaLocuri" prefHeight="26.0" prefWidth="109.0" text="Rezerva locuri">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="110.0" text="Nume persoana:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="fieldNumeRezervare" prefHeight="26.0" prefWidth="71.0" promptText="andrei" />
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="112.0" text="Locuri de rezervat:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="fieldLocuriRezervare" promptText="1, 2, 17, 18" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="400.0" prefWidth="498.0">
+                    <children>
+                  <VBox prefHeight="398.0" prefWidth="498.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="butonRezervari" alignment="CENTER" mnemonicParsing="false" onAction="#onActionButonRezervari" prefHeight="30.0" prefWidth="102.0" text="Vezi rezervari">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="206.0" text="cauta cursa">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="fieldSearch" onKeyTyped="#onKeyTypedSearch" promptText="destinatie">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                              <ListView fx:id="listView" prefHeight="395.0" prefWidth="498.0" />
+                     </children>
+                  </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
